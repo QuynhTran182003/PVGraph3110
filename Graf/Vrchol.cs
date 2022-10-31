@@ -17,17 +17,22 @@ namespace Graf
         public T Hodnota 
         {
             get { return hodnota; } 
-            set {
-                if(value < 0)
-                {
-                    throw new ArgumentException("Nesmi hodnota mensi nez 0");
-                }
-                hodnota = value; 
-            } 
+            set { hodnota = value; } 
         }
 
-        
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
 
-        
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return hodnota.ToString();
+        }
     }
 }
